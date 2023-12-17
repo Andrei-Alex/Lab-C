@@ -1,18 +1,14 @@
-#include "helpers/helpers.c"
-
-#include "exercises/guessTheNumber/guessTheNumber.c"
-
+#include "helpers/exercisesMap.h"
+#include <stdio.h>
+#include <string.h>
 int main() {
     char input[100];
-    printf("Enter an integer: ");
+    printf("Enter the exercise name: ");
     fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = 0;
 
-    if (isValidInteger(input)) {
-        int choice = strtol(input, NULL, 10); // Convert to integer
-        runSelectedFunction(choice);
-    } else {
-        printf("Invalid input. Please enter an integer.\n");
-    }
+    runExerciseByName(input);
 
     return 0;
+
 }

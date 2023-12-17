@@ -13,7 +13,7 @@ void guessTheNumber() {
     
     srand(time(NULL));
 
-    int randomNumber = rand() % 100 + 1;
+    int randomNumber = rand() % 10 + 1;
     int guess;
 
     do {
