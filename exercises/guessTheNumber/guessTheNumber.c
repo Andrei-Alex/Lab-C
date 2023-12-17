@@ -1,10 +1,6 @@
-// Generate a number between 1 and 100. 
-// Ask the user to guess until the number is found.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 
 int askTheUser() {
     int userGuess;
@@ -13,7 +9,7 @@ int askTheUser() {
     return userGuess;
 }
 
-int main() {
+void guessTheNumber() {
     
     srand(time(NULL));
 
@@ -30,6 +26,5 @@ int main() {
     } while (guess != randomNumber);
 
     printf("Congratulations! You guessed the number.\n");
-    
-    return 0;
+
 }
