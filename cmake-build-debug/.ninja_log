@@ -1,6 +1,0 @@
-# ninja log v5
-1	79	7245317408212788	CMakeFiles/Lab.dir/main.c.obj	90f64089955d86e
-1	81	7245317181049178	CMakeFiles/Lab.dir/helpers/helpers.c.obj	5e71f4cec11fe7b7
-108	221	7245128086396847	Lab.exe	1030c7eade5fc8d2
-0	130	7245317586727708	build.ninja	26ce702c83dff641
-1	101	7245317588257962	Lab.exe	1030c7eade5fc8d2

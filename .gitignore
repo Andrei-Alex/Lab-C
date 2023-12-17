@@ -1,0 +1,38 @@
+# Build output #
+################
+cmake-build-debug/
+build/
+out/
+Release/
+Debug/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+
+# CMake generated #
+####################
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# IDE specific #
+################
+.vscode/
+.idea/
+*.sublime-*
+*.user
+*.suo
+
+# OS specific #
+################
+.DS_Store
+Thumbs.db
+
+# Other #
+#########
+*.swp
+node_modules/

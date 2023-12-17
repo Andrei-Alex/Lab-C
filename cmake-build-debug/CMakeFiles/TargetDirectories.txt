@@ -1,3 +1,0 @@
-D:/Andrei/Projects/GitHub/C/lab/cmake-build-debug/CMakeFiles/Lab.dir
-D:/Andrei/Projects/GitHub/C/lab/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Andrei/Projects/GitHub/C/lab/cmake-build-debug/CMakeFiles/rebuild_cache.dir
