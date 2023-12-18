@@ -1,8 +1,7 @@
 #include "helpers.h"
 #include <stdlib.h>
-#include "exercisesMap.h"
-// Other includes...
 #include "../exercises/guessTheNumber/guessTheNumber.h"
+
 int isValidInteger(const char *str) {
     char *endptr;
     strtol(str, &endptr, 10);

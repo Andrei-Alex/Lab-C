@@ -1,6 +1,7 @@
 #include "helpers/exercisesMap.h"
 #include <stdio.h>
 #include <string.h>
+
 int main() {
     char input[100];
     printf("Enter the exercise name: ");
@@ -10,5 +11,4 @@ int main() {
     runExerciseByName(input);
 
     return 0;
-
 }
