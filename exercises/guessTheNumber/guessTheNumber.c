@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <errno.h>
-#include <limits.h>
 #include <string.h>
 #include "guessTheNumber.h"
 #include "../../utils/helpers/helpers.h"
