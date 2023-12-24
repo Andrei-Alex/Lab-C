@@ -4,5 +4,5 @@ project(Lab C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(Lab main.c utils/exercisesMap.c exercises/guessTheNumber/guessTheNumber.c
-        utils/helpers.c)
+        utils/helpers/helpers.c)
 

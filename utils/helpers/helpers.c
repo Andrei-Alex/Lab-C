@@ -21,15 +21,19 @@
  * @param str The string to validate as an integer.
  * @return int Returns 1 if the string is a valid integer, 0 otherwise.
  */
-int isValidInteger(const char *str) {
-    char *endptr;
-    strtol(str, &endptr, 10);
+int isValidNumber(const char *input) {
+    long userGuess;
+    char *endPtr;
 
-    // Check conversion validity
-    if (endptr == str || (*endptr != '\n' && *endptr != '\0')) {
-        return 0;  // Not a valid integer
+    errno = 0;
+    userGuess = strtol(input, &endPtr, 10);
+
+    if (endPtr == input || (*endPtr != '\n' && *endPtr != '\0')) {
+        return -1; // No digits were found or string contains extra characters
+    } else if (errno == ERANGE || userGuess > INT_MAX || userGuess < INT_MIN) {
+        return -1; // Value out of range
     }
-    return 1;  // Valid integer
+    return (int)userGuess;
 }
 
 /**

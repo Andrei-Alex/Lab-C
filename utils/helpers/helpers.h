@@ -22,7 +22,7 @@
  * @param str A constant pointer to the string to be validated.
  * @return Returns 1 if the string is a valid integer, 0 otherwise.
  */
-int isValidInteger(const char *str);
+int isValidNumber(const char *str);
 
 /**
  * @brief Prototype for executing a function based on the given user choice.

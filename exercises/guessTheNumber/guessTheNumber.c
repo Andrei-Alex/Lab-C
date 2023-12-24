@@ -3,7 +3,10 @@
 #include <time.h>
 #include <errno.h>
 #include <limits.h>
+#include <string.h>
 #include "guessTheNumber.h"
+#include "../../utils/helpers/helpers.h"
+
 
 /**
  * guessTheNumber.c
@@ -21,34 +24,25 @@
  *
  * @note This function assumes that the input buffer is large enough to hold
  *       the user's input. Otherwise, a buffer overflow may occur.
- * @note The function modifies the global variable `errno` and the input buffer `input`.
  */
 int askTheUser() {
     char input[MAX_INPUT_LENGTH];
-    long userGuess;
-    char *endPtr;
 
     printf("Enter your guess (1-10): ");
-
     if (fgets(input, sizeof(input), stdin) == NULL) {
         printf("Error reading input.\n");
         return -1;
     }
 
-    errno = 0;
-    userGuess = strtol(input, &endPtr, 10);
+    // Remove the newline character if present
+    input[strcspn(input, "\n")] = 0;
 
-    if (endPtr == input) {
-        printf("No numeric input was found. Please enter a valid number.\n");
-        return -1;
-    } else if (*endPtr != '\n' && *endPtr != '\0') {
-        printf("Partial or invalid input. Please enter a whole number.\n");
-        return -1;
-    } else if (errno == ERANGE || userGuess > INT_MAX || userGuess < INT_MIN) {
-        printf("Number out of range for int.\n");
-        return -1;
+    // Validate the input
+    int validatedGuess = isValidNumber(input);
+    if (validatedGuess == -1) {
+        printf("Invalid input. Please enter a whole number.\n");
     }
-    return (int)userGuess;
+    return validatedGuess;
 }
 
 /**
