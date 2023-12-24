@@ -4,8 +4,15 @@
 #include "../exercises/guessTheNumber/guessTheNumber.h"
 
 ExerciseMap exerciseList[] = {
-        {"Exercise 1", guessTheNumber},
+        {"Guess", guessTheNumber},
 };
+
+void printAvailableExercise() {
+    printf("Available exercises:\n");
+    for (int i = 0; i < sizeof(exerciseList) / sizeof(ExerciseMap); i++) {
+        printf("%d. %s\n", i + 1, exerciseList[i].name);
+    }
+}
 
 void runExerciseByName(const char* name) {
     int exerciseCount = sizeof(exerciseList) / sizeof(ExerciseMap);

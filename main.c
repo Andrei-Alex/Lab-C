@@ -3,6 +3,8 @@
 #include <string.h>
 
 int main() {
+    printAvailableExercise();
+
     char input[100];
     printf("Enter the exercise name: ");
     fgets(input, sizeof(input), stdin);

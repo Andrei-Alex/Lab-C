@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <errno.h>
+#include <limits.h>
+#include "guessTheNumber.h"
 
+/**
+ * guessTheNumber.c
+ * Purpose: Number guessing game where the user tries to guess a randomly generated number.
+ */
 
 /**
  * @brief Asks the user to enter a guess and returns the input as an integer.
@@ -17,12 +24,11 @@
  * @note The function modifies the global variable `errno` and the input buffer `input`.
  */
 int askTheUser() {
-    char input[10];
+    char input[MAX_INPUT_LENGTH];
     long userGuess;
     char *endPtr;
 
-
-    printf("Enter your guess: ");
+    printf("Enter your guess (1-10): ");
 
     if (fgets(input, sizeof(input), stdin) == NULL) {
         printf("Error reading input.\n");
@@ -45,16 +51,25 @@ int askTheUser() {
     return (int)userGuess;
 }
 
-
+/**
+ * @brief Main logic for the number guessing game.
+ *
+ * This function generates a random number between 1 and 10 and prompts the user
+ * to guess the number. It uses a loop to continue asking the user for a guess until
+ * the correct number is guessed.
+ */
 void guessTheNumber() {
+    srand(time(NULL)); // Seed the random number generator with the current time
 
-    srand(time(NULL));
-
-    int randomNumber = rand() % 10 + 1;
+    int randomNumber = rand() % MAX_NUMBER + 1;
     int guess;
 
     do {
         guess = askTheUser();
+
+        if (guess == -1) { // Check for input error
+            continue; // Skip to the next iteration
+        }
 
         if (guess != randomNumber) {
             printf("Incorrect guess. Try again.\n");
@@ -62,6 +77,6 @@ void guessTheNumber() {
 
     } while (guess != randomNumber);
 
-    printf("Congratulations! You guessed the number.\n");
-
+    printf("Congratulations! You guessed the number %d.\n", randomNumber);
 }
+

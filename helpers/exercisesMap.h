@@ -9,5 +9,5 @@ typedef struct {
 } ExerciseMap;
 
 void runExerciseByName(const char* name);
-
+void printAvailableExercise();
 #endif
