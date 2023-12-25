@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "../exercises/guessTheNumber/guessTheNumber.h"
+#include "../exercises/multiplicationTable/multiplicationTable.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
+        {"Multiplication", multiplicationTable},
 };
 
 void printAvailableExercise() {

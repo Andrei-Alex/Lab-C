@@ -1,74 +1,56 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include "guessTheNumber.h"
-#include "../../utils/helpers/helpers.h"
-
 
 /**
- * guessTheNumber.c
- * Purpose: Number guessing game where the user tries to guess a randomly generated number.
+ * multiplication_table.c
+ * Purpose: To print a multiplication table for a single digit provided by the user.
  */
 
 /**
- * @brief Asks the user to enter a guess and returns the input as an integer.
+ * @brief Captures a single digit from the user.
  *
- * The function prompts the user to enter a guess and reads the input from the
- * standard input. If the input is not a valid number or it is out of the range
- * for an integer, an error message is printed and -1 is returned.
+ * Prompts the user to enter a single digit and captures that input. The input is
+ * expected to be a single digit (0-9). If the user enters an invalid digit or a
+ * non-digit, the behavior is undefined as there is no input validation.
  *
- * @return The user's guess as an integer, or -1 if an error occurred.
- *
- * @note This function assumes that the input buffer is large enough to hold
- *       the user's input. Otherwise, a buffer overflow may occur.
+ * @return The digit entered by the user as an integer.
  */
-int askTheUser() {
-    char input[MAX_INPUT_LENGTH];
+int getDigit() {
+    int userInput;
+    printf("Please enter a single digit: ");
+    scanf("%d", &userInput);
 
-    printf("Enter your guess (1-10): ");
-    if (fgets(input, sizeof(input), stdin) == NULL) {
-        printf("Error reading input.\n");
-        return -1;
-    }
-
-    // Remove the newline character if present
-    input[strcspn(input, "\n")] = 0;
-
-    // Validate the input
-    int validatedGuess = isValidNumber(input);
-    if (validatedGuess == -1) {
-        printf("Invalid input. Please enter a whole number.\n");
-    }
-    return validatedGuess;
+    return userInput;
 }
 
 /**
- * @brief Main logic for the number guessing game.
+ * @brief Prints the multiplication table for the given digit up to 10.
  *
- * This function generates a random number between 1 and 10 and prompts the user
- * to guess the number. It uses a loop to continue asking the user for a guess until
- * the correct number is guessed.
+ * Takes a single digit as input and prints its multiplication table from 1 to 10.
+ * Each line of the table is of the form 'i * digit = result'.
+ *
+ * @param digit The single digit for which the multiplication table is printed.
  */
-void guessTheNumber() {
-    srand(time(NULL)); // Seed the random number generator with the current time
+void printTable(int digit) {
 
-    int randomNumber = rand() % MAX_NUMBER + 1;
-    int guess;
-
-    do {
-        guess = askTheUser();
-
-        if (guess == -1) { // Check for input error
-            continue; // Skip to the next iteration
-        }
-
-        if (guess != randomNumber) {
-            printf("Incorrect guess. Try again.\n");
-        }
-
-    } while (guess != randomNumber);
-
-    printf("Congratulations! You guessed the number %d.\n", randomNumber);
+    for(int i= 1; i <= 10; i++) {
+        printf("%d * %d = %d\n", i, digit, i * digit);
+    }
 }
+
+/**
+ * @brief Orchestrates the multiplication table printing.
+ *
+ * Coordinates the process of obtaining a single digit from the user and
+ * then printing the multiplication table for that digit. It calls `getDigit()`
+ * to get the user's input and then `printTable()` to print the table.
+ */
+void multiplicationTable() {
+    int digit = getDigit();
+    printTable(digit);
+}
+
+/**
+ * TODO: This program does not handle erroneous non-numeric input or numbers outside
+ *       the range of single digits. It assumes the user will input a single digit (0-9).
+ */
 
