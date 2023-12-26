@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "multiplicationTable.h"
 /**
  * multiplication_table.c
  * Purpose: To print a multiplication table for a single digit provided by the user.

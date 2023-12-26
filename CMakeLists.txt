@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 # Main application
 add_executable(Lab main.c utils/exercisesMap.c exercises/guessTheNumber/guessTheNumber.c utils/helpers/helpers.c
-        exercises/multiplicationTable/multiplicationTable.c)
+        exercises/multiplicationTable/multiplicationTable.c
+        exercises/operations/operations.c)

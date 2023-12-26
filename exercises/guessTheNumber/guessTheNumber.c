@@ -6,23 +6,23 @@
 #include "../../utils/helpers/helpers.h"
 
 
-/**
- * guessTheNumber.c
- * Purpose: Number guessing game where the user tries to guess a randomly generated number.
- */
+    /**
+     * guessTheNumber.c
+     * Purpose: Number guessing game where the user tries to guess a randomly generated number.
+     */
 
-/**
- * @brief Asks the user to enter a guess and returns the input as an integer.
- *
- * The function prompts the user to enter a guess and reads the input from the
- * standard input. If the input is not a valid number or it is out of the range
- * for an integer, an error message is printed and -1 is returned.
- *
- * @return The user's guess as an integer, or -1 if an error occurred.
- *
- * @note This function assumes that the input buffer is large enough to hold
- *       the user's input. Otherwise, a buffer overflow may occur.
- */
+    /**
+     * @brief Asks the user to enter a guess and returns the input as an integer.
+     *
+     * The function prompts the user to enter a guess and reads the input from the
+     * standard input. If the input is not a valid number or it is out of the range
+     * for an integer, an error message is printed and -1 is returned.
+     *
+     * @return The user's guess as an integer, or -1 if an error occurred.
+     *
+     * @note This function assumes that the input buffer is large enough to hold
+     *       the user's input. Otherwise, a buffer overflow may occur.
+     */
 int askTheUser() {
     char input[MAX_INPUT_LENGTH];
 

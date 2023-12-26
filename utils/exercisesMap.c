@@ -3,10 +3,12 @@
 #include <string.h>
 #include "../exercises/guessTheNumber/guessTheNumber.h"
 #include "../exercises/multiplicationTable/multiplicationTable.h"
+#include "../exercises/operations/operations.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
         {"Multiplication", multiplicationTable},
+        {"Operations", operations},
 };
 
 void printAvailableExercise() {

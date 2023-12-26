@@ -1,3 +1,5 @@
+// Exercise translated from assembly language
+
 #include <stdio.h>
 
 int main() { 
