@@ -11,4 +11,7 @@ add_executable(Lab main.c
         exercises/multiplicationTable/multiplicationTable.c
         exercises/operations/operations.c
         exercises/binaryOperators/binaryOperators.c
-        exercises/bitShift/bitShift.c)
+        exercises/bitShift/bitShift.c
+        exercises/binaryEven/binaryEven.c
+        exercises/binaryEven/binaryEven.h
+)

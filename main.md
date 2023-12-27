@@ -57,7 +57,11 @@ void runExerciseByName(const char* name);
 **Example Initialization**:
 ```c
 ExerciseMap exerciseList[] = {
-    {"Guess", guessTheNumber},
+        {"Guess", guessTheNumber},
+        {"Multiplication", multiplicationTable},
+        {"Operations", operations},
+        {"BinaryOperators", binaryOperators},
+        {"BitShift", bitShift},
 };
 ```
 
