@@ -5,12 +5,14 @@
 #include "../exercises/multiplicationTable/multiplicationTable.h"
 #include "../exercises/operations/operations.h"
 #include "../exercises/binaryOperators/binaryOperators.h"
+#include "../exercises/bitShift/bitShift.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
         {"Multiplication", multiplicationTable},
         {"Operations", operations},
         {"BinaryOperators", binaryOperators},
+        {"BitShift", bitShift},
 };
 
 void printAvailableExercise() {

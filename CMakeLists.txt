@@ -10,4 +10,5 @@ add_executable(Lab main.c
         exercises/guessTheNumber/guessTheNumber.c
         exercises/multiplicationTable/multiplicationTable.c
         exercises/operations/operations.c
-        exercises/binaryOperators/binaryOperators.c)
+        exercises/binaryOperators/binaryOperators.c
+        exercises/bitShift/bitShift.c)
