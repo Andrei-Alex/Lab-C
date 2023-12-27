@@ -4,11 +4,13 @@
 #include "../exercises/guessTheNumber/guessTheNumber.h"
 #include "../exercises/multiplicationTable/multiplicationTable.h"
 #include "../exercises/operations/operations.h"
+#include "../exercises/binaryAnd/binaryAnd.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
         {"Multiplication", multiplicationTable},
         {"Operations", operations},
+        {"BinaryAnd", binaryAnd},
 };
 
 void printAvailableExercise() {
