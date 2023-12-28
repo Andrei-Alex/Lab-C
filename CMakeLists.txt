@@ -14,4 +14,6 @@ add_executable(Lab main.c
         exercises/bitShift/bitShift.c
         exercises/binaryEven/binaryEven.c
         exercises/binaryEven/binaryEven.h
+        exercises/arrayIntersection/arrayIntersection.c
+        exercises/arrayIntersection/arrayIntersection.h
 )
