@@ -8,6 +8,7 @@
 #include "../exercises/bitShift/bitShift.h"
 #include "../exercises/binaryEven/binaryEven.h"
 #include "../exercises/arrayIntersection/arrayIntersection.h"
+#include "../exercises/oddAndEven/oddAndEven.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
@@ -17,6 +18,7 @@ ExerciseMap exerciseList[] = {
         {"BitShift", bitShift},
         {"BinaryEven", binaryEven},
         {"ArrayIntersection", arrayIntersection},
+        {"OddAndEven", oddAndEven},
 };
 
 void printAvailableExercise() {
