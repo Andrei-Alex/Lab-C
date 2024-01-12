@@ -21,4 +21,19 @@ void pointer() {
 
     // Print the new value of 'a'
     printf("a = %d\n", a);
+
+    int *pointerToInt;
+    char *pointerToChar;
+    double *pointerToDouble;
+    float *pointerToFloat;
+    void *pointerToVoid;
+
+    // Display all the dimensions of pointers
+    printf("Dimensiunea pointerului la int: %zu bytes\n", sizeof(pointerToInt));
+    printf("Dimensiunea pointerului la char: %zu bytes\n", sizeof(pointerToChar));
+    printf("Dimensiunea pointerului la double: %zu bytes\n", sizeof(pointerToDouble));
+    printf("Dimensiunea pointerului la float: %zu bytes\n", sizeof(pointerToFloat));
+    printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(pointerToVoid));
+    printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(*pa));
+
 }
