@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int pointer() {
+void pointer() {
     // Declare an integer variable 'a' and initialize it to 100
     int a = 100;
 
