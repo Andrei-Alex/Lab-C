@@ -14,7 +14,6 @@
  * This serves as an example of pointer declaration, initialization,
  * dereferencing for value modification, and basic pointer arithmetic.
  *
- * @return Returns 0 to indicate successful completion.
  */
 
 void pointer();
