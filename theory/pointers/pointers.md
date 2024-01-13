@@ -39,7 +39,16 @@ We can store this memory address in a special type of variable, called a "pointe
 
 - A pointer is a special type of variable that stores the memory address of another variable.
 
-- A pointer knows exactly the position where the storage of a variable in memory begins. A pointer knows exactly the number of bytes used in the storage of variables. This is possible because pointers are defined together with the type of variable they point to.
+```c
+  printf("*pa = %p\n", (void *)pa);
+  printf("*pa value = %d\n", *pa);
+```
+
+- A pointer knows exactly the position/location where the storage of a variable in memory begins. A pointer knows exactly the number of bytes used in the storage of variables. This is possible because pointers are defined together with the type of variable they point to.
+
+```c
+  printf("*pa = %p\n", (void *)pa);
+```
 
 - The actual size of a pointer (the variable of the pointer type) is always the same, regardless of the type of variable it points to.
 ```c
@@ -50,7 +59,6 @@ printf("Dimensiunea pointerului la float: %zu bytes\n", sizeof(pointerToFloat));
 printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(pointerToVoid));
 printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(*pa));
 
-// 8 Bytes
 ```
 - A pointer can be incremented or decremented, moving from the beginning of one variable to the beginning of the next (or previous). This is called "pointer arithmetic".
 
