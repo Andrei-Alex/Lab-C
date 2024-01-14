@@ -37,4 +37,14 @@ void pointer() {
     printf("Pointer size for float: %zu bytes\n", sizeof(pointerToFloat));
     printf("Pointer size for void: %zu bytes\n", sizeof(pointerToVoid));
 
+    // Pointer arithmetic
+    printf("Address of pa pointer: %p, %d\n", (void *)pa, *pa);
+    // Increment pointer
+    pa++;
+    printf("Address after inc: %p, Nothing stored in this memory location\n", (void *)pa);
+
+    // Decrement pointer
+    pa--;
+    printf("Address after dec: %p, Value: %d\n", (void *)pa, *pa);
+    printf("It returned to the location of pa")
 }

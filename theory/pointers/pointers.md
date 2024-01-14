@@ -52,16 +52,22 @@ We can store this memory address in a special type of variable, called a "pointe
 
 - The actual size of a pointer (the variable of the pointer type) is always the same, regardless of the type of variable it points to.
 ```c
-printf("Dimensiunea pointerului la int: %zu bytes\n", sizeof(pointerToInt));
-printf("Dimensiunea pointerului la char: %zu bytes\n", sizeof(pointerToChar));
-printf("Dimensiunea pointerului la double: %zu bytes\n", sizeof(pointerToDouble));
-printf("Dimensiunea pointerului la float: %zu bytes\n", sizeof(pointerToFloat));
-printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(pointerToVoid));
-printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(*pa));
-
+   printf("Dimensiunea pointerului la int: %zu bytes\n", sizeof(pointerToInt));
+   printf("Dimensiunea pointerului la char: %zu bytes\n", sizeof(pointerToChar));
+   printf("Dimensiunea pointerului la double: %zu bytes\n", sizeof(pointerToDouble));
+   printf("Dimensiunea pointerului la float: %zu bytes\n", sizeof(pointerToFloat));
+   printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(pointerToVoid));
+   printf("Dimensiunea pointerului la void: %zu bytes\n", sizeof(*pa));
 ```
 - A pointer can be incremented or decremented, moving from the beginning of one variable to the beginning of the next (or previous). This is called "pointer arithmetic".
-
+```c
+    printf("Address of pa pointer: %p, %d\n", (void *)pa, *pa);
+    pa++;
+    printf("Address after inc: %p, Nothing stored in this memory location\n", (void *)pa);
+    pa--;
+    printf("Address after dec: %p, Value: %d\n", (void *)pa, *pa);
+    printf("It returned to the location of pa")
+```
 - A pointer can be used to obtain the value of the variable it points to. This operation is called dereferencing.
 
 ## More info?
