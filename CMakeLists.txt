@@ -18,4 +18,6 @@ add_executable(Lab main.c
         exercises/arrayIntersection/arrayIntersection.h
         exercises/oddAndEven/oddAndEven.h
         exercises/oddAndEven/oddAndEven.c
+        exercises/arraySplit/arraySplit.c
+        exercises/arraySplit/arraySplit.
 )

@@ -9,6 +9,7 @@
 #include "../exercises/binaryEven/binaryEven.h"
 #include "../exercises/arrayIntersection/arrayIntersection.h"
 #include "../exercises/oddAndEven/oddAndEven.h"
+#include "../exercises/arraySplit/arraySplit.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
@@ -19,6 +20,7 @@ ExerciseMap exerciseList[] = {
         {"BinaryEven", binaryEven},
         {"ArrayIntersection", arrayIntersection},
         {"OddAndEven", oddAndEven},
+        {"ArraySplit", arraySplit},
 };
 
 void printAvailableExercise() {

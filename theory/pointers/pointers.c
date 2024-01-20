@@ -46,5 +46,5 @@ void pointer() {
     // Decrement pointer
     pa--;
     printf("Address after dec: %p, Value: %d\n", (void *)pa, *pa);
-    printf("It returned to the location of pa")
+    printf("It returned to the location of pa");
 }
