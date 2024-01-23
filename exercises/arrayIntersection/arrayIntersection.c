@@ -13,15 +13,14 @@ void arrayIntersection() {
 
     int vector1[] = {1, 2, 3, 4, 5};
     int vector2[] = {4, 5, 6, 7, 8};
-    int intersectie[5]; // Array to hold the intersection, size of the smaller array
-    int dim1 = 5, dim2 = 5; // Sizes of the arrays
-    int k = 0; // Counter for intersection array
+    int intersectie[5];
+    int dim1 = 5, dim2 = 5;
+    int k = 0;
 
-    // Find intersection
+
     for(int i = 0; i < dim1; i++) {
         for(int j = 0; j < dim2; j++) {
             if(vector1[i] == vector2[j]) {
-                // Check if the element is already in the intersection array
                 int found = 0;
                 for (int l = 0; l < k; l++) {
                     if (intersectie[l] == vector1[i]) {
@@ -30,14 +29,13 @@ void arrayIntersection() {
                     }
                 }
                 if (!found) {
-                    intersectie[k] = vector1[i]; // Add element to intersection
+                    intersectie[k] = vector1[i];
                     k++;
                 }
             }
         }
     }
 
-    // Print the intersection
     printf("Intersection is: ");
     for(int i = 0; i < k; i++) {
         printf("%d ", intersectie[i]);
