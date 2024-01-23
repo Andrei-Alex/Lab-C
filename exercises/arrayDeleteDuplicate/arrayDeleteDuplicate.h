@@ -1,0 +1,6 @@
+#ifndef LAB_ARRAYDELETEDUPLICATE_H
+#define LAB_ARRAYDELETEDUPLICATE_H
+
+void arrayDeleteDuplicate();
+
+#endif //LAB_ARRAYDELETEDUPLICATE_H

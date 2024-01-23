@@ -19,5 +19,7 @@ add_executable(Lab main.c
         exercises/oddAndEven/oddAndEven.h
         exercises/oddAndEven/oddAndEven.c
         exercises/arraySplit/arraySplit.c
-        exercises/arraySplit/arraySplit.
+        exercises/arraySplit/arraySplit.h
+        exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.h
+        exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.c
 )

@@ -10,6 +10,7 @@
 #include "../exercises/arrayIntersection/arrayIntersection.h"
 #include "../exercises/oddAndEven/oddAndEven.h"
 #include "../exercises/arraySplit/arraySplit.h"
+#include "../exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
@@ -21,6 +22,7 @@ ExerciseMap exerciseList[] = {
         {"ArrayIntersection", arrayIntersection},
         {"OddAndEven", oddAndEven},
         {"ArraySplit", arraySplit},
+        {"ArrayDeleteDuplicate", arrayDeleteDuplicate},
 };
 
 void printAvailableExercise() {
