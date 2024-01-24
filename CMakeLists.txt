@@ -22,4 +22,6 @@ add_executable(Lab main.c
         exercises/arraySplit/arraySplit.h
         exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.h
         exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.c
+        exercises/arrayRandom/arrayRandom.h
+        exercises/arrayRandom/arrayRandom.c
 )

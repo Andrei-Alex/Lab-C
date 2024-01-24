@@ -11,6 +11,7 @@
 #include "../exercises/oddAndEven/oddAndEven.h"
 #include "../exercises/arraySplit/arraySplit.h"
 #include "../exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.h"
+#include "../exercises/arrayRandom/arrayRandom.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
@@ -23,6 +24,7 @@ ExerciseMap exerciseList[] = {
         {"OddAndEven", oddAndEven},
         {"ArraySplit", arraySplit},
         {"ArrayDeleteDuplicate", arrayDeleteDuplicate},
+        {"ArrayRandom", arrayRandom},
 };
 
 void printAvailableExercise() {
