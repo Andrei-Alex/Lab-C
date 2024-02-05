@@ -1,0 +1,7 @@
+#ifndef LAB_ARRAYNUMBERFREQUENCY_H
+#define LAB_ARRAYNUMBERFREQUENCY_H
+
+#define MAX_VAL 100
+void arrayNumberFrequency();
+
+#endif //LAB_ARRAYNUMBERFREQUENCY_H

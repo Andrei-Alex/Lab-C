@@ -12,6 +12,7 @@
 #include "../exercises/arraySplit/arraySplit.h"
 #include "../exercises/arrayDeleteDuplicate/arrayDeleteDuplicate.h"
 #include "../exercises/arrayRandom/arrayRandom.h"
+#include "../exercises/arrayNumberFrequency/arrayNumberFrequency.h"
 
 ExerciseMap exerciseList[] = {
         {"Guess", guessTheNumber},
@@ -25,6 +26,7 @@ ExerciseMap exerciseList[] = {
         {"ArraySplit", arraySplit},
         {"ArrayDeleteDuplicate", arrayDeleteDuplicate},
         {"ArrayRandom", arrayRandom},
+        {"ArrayNumberFrequency", arrayNumberFrequency},
 };
 
 void printAvailableExercise() {
